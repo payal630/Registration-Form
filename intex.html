@@ -1,139 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
-
-        body{
-            background:#f2f2f2;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
-
-        .container{
-            width:100%;
-            max-width:400px;
-            background:#fff;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
-        }
-
-        h2{
-            text-align:center;
-            margin-bottom:20px;
-        }
-
-        label{
-            display:block;
-            margin-top:15px;
-            margin-bottom:5px;
-            font-weight:bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select{
-            width:100%;
-            padding:10px;
-            border:1px solid #ccc;
-            border-radius:5px;
-            font-size:16px;
-        }
-
-        .gender{
-            margin-top:10px;
-        }
-
-        .gender label{
-            display:inline;
-            font-weight:normal;
-            margin-right:15px;
-        }
-
-        button{
-            width:100%;
-            margin-top:20px;
-            padding:12px;
-            background:#007BFF;
-            color:white;
-            border:none;
-            border-radius:5px;
-            font-size:16px;
-            cursor:pointer;
-        }
-
-        button:hover{
-            background:#0056b3;
-        }
-
-        @media (max-width:500px){
-            .container{
-                width:90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
 </head>
 <body>
 
-<div class="container">
-    <h2>Registration Form</h2>
+  <h1>Registration Form</h1>
 
-    <form>
+  <form>
 
-        <!-- Full Name -->
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name" required>
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName">
+    <br><br>
 
-        <!-- Email -->
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <br><br>
 
-        <!-- Password -->
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <br><br>
 
-        <!-- Gender -->
-        <label>Gender</label>
-        <div class="gender">
-            <input type="radio" id="male" name="gender" required>
-            <label for="male">Male</label>
+    <fieldset>
+      <legend>Gender</legend>
 
-            <input type="radio" id="female" name="gender">
-            <label for="female">Female</label>
+      <label for="genderMale">Male</label>
+      <input type="radio" id="genderMale" name="gender" value="male">
 
-            <input type="radio" id="other" name="gender">
-            <label for="other">Other</label>
-        </div>
+      <label for="genderFemale">Female</label>
+      <input type="radio" id="genderFemale" name="gender" value="female">
 
-        <!-- Course / Interest -->
-        <label for="course">Course / Interest</label>
-        <select id="course" required>
-            <option value="">Select Course</option>
-            <option>Web Development</option>
-            <option>Java</option>
-            <option>Python</option>
-            <option>Data Science</option>
-            <option>Graphic Design</option>
-        </select>
+      <label for="genderOther">Other</label>
+      <input type="radio" id="genderOther" name="gender" value="other">
+    </fieldset>
+    <br>
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
+    <label for="course">Course/Interest</label>
+    <select id="course" name="course">
+      <option value="">Select a course</option>
+      <option value="web-development">Web Development</option>
+      <option value="data-science">Data Science</option>
+      <option value="graphic-design">Graphic Design</option>
+      <option value="digital-marketing">Digital Marketing</option>
+      <option value="mobile-app-development">Mobile App Development</option>
+    </select>
+    <br><br>
 
-    </form>
-</div>
+    <button type="submit">Submit</button>
+
+  </form>
 
 </body>
 </html>
